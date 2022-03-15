@@ -6,8 +6,6 @@
     - 두번째 테스트는 AB 테스트 입니다. 
     - wav 파일을 두 개를 비교하고 더 좋은 모델을 선택해주세요 
 
-- [평가 페이지](https://docs.google.com/forms/d/e/1FAIpQLSdkFW3fycDzqYmPPGoU5qhkAVFRJ7imH1UBQjvsfbv7KCaizw/viewform?usp=sf_link)
-
 <table style='width: 120%;'>
 <thead>
     <tr>
