@@ -26,8 +26,12 @@ index_dict = {"NSinger2Aug": list(), "NSinger2Tune": list()}
 
 def making_radio_in_html(file, count):
     f.write('\t<tr>\n')
-    f.write('\t\t<td colspan="3">\n')
+    f.write('\t\t<td></td>\n')
+    f.write('\t\t<td style="text-align:center">\n')
     for i in range(0, 6):
+        if i == 3:
+            f.write('\t\t</td>\n')
+            f.write('\t\t<td style="text-align:center">\n')
         id_var = "_prosody" if i < 3 else "_dynamics"
         name_var = str(cnt - 1) + id_var
         value_prefix = ""
@@ -40,7 +44,7 @@ def making_radio_in_html(file, count):
             value_prefix = 'C'
         value_var = value_prefix + id_var
 
-        f.write('\t\t\t<label><input type="radio" id="{}" name="{}" value="{}">{}</label>\n'.format(id_var, name_var, value_var, value_var))
+        f.write('\t\t\t<label><input type="radio" id="{}" name="{}" value="{}" style="margin-right: 0;"> {} </label>\n'.format(id_var, name_var, value_var, value_var))
     f.write('\t\t</td>\n')
     f.write('\t</tr>\n')
 
