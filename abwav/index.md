@@ -18,11 +18,17 @@
 	<tr>
 		<th scope="row">1</th> <td><audio controls="" ><source src="wav/abtest/NSinger2Tune_05_balladw01_atTheEnd_007.wav" type="audio/wav"></audio></td>
 		<td><audio controls="" ><source src="wav/abtest/NSinger2Aug_05_balladw01_atTheEnd_007.wav" type="audio/wav"></audio></td>
-		<br>
-		<label><input type="radio" id="A_Prosody" value="A_Prosody">A_Prosody</label>
-		<label><input type="radio" id="B_Prosody" value="B_Prosody">B_Prosody</label>
-		<label><input type="radio" id="C_Prosody" value="C_Prosody">C_Prosody</label>
-
+		<!-- <br> -->
+		<!-- <label><input type="radio" id="A_Prosody" value="A_Prosody">A_Prosody</label> -->
+		<!-- <label><input type="radio" id="B_Prosody" value="B_Prosody">B_Prosody</label> -->
+		<!-- <label><input type="radio" id="C_Prosody" value="C_Prosody">C_Prosody</label> -->
+		{% multiple_choice name:"radiobutton" type:"radio" %}
+		# Which of these answers is the right answer?
+		this is line _two_ [click here to see my site](www.mysite.com)
+		[ ](answerA) A: This is the correct answer
+		[](answerB) B: A is the correct answer
+		[X](allAbove) C: All of the above
+		{% endmultiple_choice %}
 	</tr>
 </tbody>
 <tbody>
