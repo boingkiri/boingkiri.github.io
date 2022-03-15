@@ -6,6 +6,8 @@
     - 두번째 테스트는 AB 테스트 입니다. 
     - wav 파일을 두 개를 비교하고 더 좋은 모델을 선택해주세요 
 
+<form action="www.google.com">
+
 <table style='width: 120%;'>
 <thead>
     <tr>
@@ -492,3 +494,5 @@
 </table>
 
 <input type="submit" value="Submit">
+
+</form>
