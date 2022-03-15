@@ -20,6 +20,11 @@
 	<tr>
 		<th scope="row">1</th> <td><audio controls="" ><source src="wav/abtest/NSinger2Tune_05_balladw01_atTheEnd_007.wav" type="audio/wav"></audio></td>
 		<td><audio controls="" ><source src="wav/abtest/NSinger2Aug_05_balladw01_atTheEnd_007.wav" type="audio/wav"></audio></td>
+		<br>
+		<label><input type="radio" id="A_Prosody" value="A_Prosody">A_Prosody</label>
+		<label><input type="radio" id="B_Prosody" value="B_Prosody">B_Prosody</label>
+		<label><input type="radio" id="C_Prosody" value="C_Prosody">C_Prosody</label>
+
 	</tr>
 </tbody>
 <tbody>
