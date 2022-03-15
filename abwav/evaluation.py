@@ -2,6 +2,8 @@ import os
 import numpy as np 
 import pdb
 
+test_mode = True
+markdown_file = "test.md" if test_mode else "index.md"
 
 abtest_dirs = os.listdir("wav/abtest")
 
@@ -27,7 +29,7 @@ for idx, key in enumerate(NSinger2Aug_dict.keys()):
     dict2 = dict_dict[perm[1]]
     
     if idx == 0:
-        with open("test.md", 'w') as f:
+        with open(markdown_file, 'w') as f:
             f.write('<tbody>\n')
             f.write('\t<tr>\n')
             f.write('\t\t<th scope="row">{}</th> <td><audio controls="" ><source src="{}" type="audio/wav"></audio></td>\n'.format(cnt, dict1[key]))
@@ -36,9 +38,29 @@ for idx, key in enumerate(NSinger2Aug_dict.keys()):
             f.write('\t\t<td><audio controls="" ><source src="{}" type="audio/wav"></audio></td>\n'.format(dict2[key]))
             index_dict[perm[0]].append(cnt-1)
             f.write('\t</tr>\n')
+            ##
+            f.write('\t<tr>\n')
+            f.write('\t\t<td colspan="3">\n')
+            for i in range(0, 6):
+                id_var = "_prosody" if i < 3 else "_dynamics"
+                name_var = str(cnt - 1) + id_var
+                value_prefix = ""
+                value_var = ""
+                if i % 3 == 0:
+                    value_prefix = 'A'
+                elif i % 3 == 1:
+                    value_prefix = 'B'
+                else:
+                    value_prefix = 'C'
+                value_var = value_prefix + id_var
+
+                f.write('\t\t\t<input type="radio" id="{}" name="{}" value="{}">{}\n'.format(id_var, name_var, value_var, value_var))
+            f.write('\t\t</td>\n')
+            f.write('\t</tr>\n')
+            ##
             f.write('</tbody>\n')
     else: 
-        with open("test.md", 'a') as f:
+        with open(markdown_file, 'a') as f:
             f.write('<tbody>\n')
             f.write('\t<tr>\n')
             f.write('\t\t<th scope="row">{}</th> <td><audio controls="" ><source src="{}" type="audio/wav"></audio></td>\n'.format(cnt, dict1[key]))
@@ -47,4 +69,28 @@ for idx, key in enumerate(NSinger2Aug_dict.keys()):
             f.write('\t\t<td><audio controls="" ><source src="{}" type="audio/wav"></audio></td>\n'.format(dict2[key]))
             index_dict[perm[0]].append(cnt-1)
             f.write('\t</tr>\n')
+            ##
+            f.write('\t<tr>\n')
+            f.write('\t\t<td colspan="3">\n')
+            for i in range(0, 6):
+                id_var = "_prosody" if i < 3 else "_dynamics"
+                name_var = str(cnt - 1) + id_var
+                value_prefix = ""
+                value_var = ""
+                if i % 3 == 0:
+                    value_prefix = 'A'
+                elif i % 3 == 1:
+                    value_prefix = 'B'
+                else:
+                    value_prefix = 'C'
+                value_var = value_prefix + id_var
+
+                f.write('\t\t\t<input type="radio" id="{}" name="{}" value="{}">{}\n'.format(id_var, name_var, value_var, value_var))
+            f.write('\t\t</td>\n')
+            f.write('\t</tr>\n')
+            ##
             f.write('</tbody>\n')
+
+# The code below have to be inserted after closing table
+# f.write('\n<button name="submit" onclick="http://www.google.com">Click me</button>\n')
+# <input type="submit" value="Submit"> <input type="reset" value="Reset">
