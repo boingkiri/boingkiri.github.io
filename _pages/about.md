@@ -16,7 +16,6 @@ toc: true
     * 2020 ~ 2022
         * 육군 만기 전역
 
-
 ## Career
     * 창원과학고등학교
         * 2015 캔위성 경연대회 최우수상 (미래과학기술부장관상)
@@ -33,7 +32,6 @@ toc: true
 
 ## Hobby
     * Music
-
 
 ## Goal
     * ML Researcher
