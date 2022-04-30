@@ -1,7 +1,7 @@
 ---
 title: Test for posting by using admin
 category:
-    - "deep learning"
+    - "Deep Learning"
 ---
 
 * Well I don't care, even if you're a sweet liar.
