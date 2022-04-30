@@ -1,5 +1,5 @@
 ---
-title: Test for posting by using admin
+title: "[Deep Learning] Test for posting by using admin"
 category:
     - "Deep Learning"
 ---
