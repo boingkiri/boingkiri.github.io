@@ -43,6 +43,7 @@ layout: default
           </aside>
         {% endif %}
         {{ content }}
+        {% if page.studying %}{% include studying_banner.html %}{% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
@@ -53,7 +54,7 @@ layout: default
         {% include page__taxonomy.html %}
         {% include page__date.html %}
       </footer>
-
+      
       {% if page.share %}{% include social-share.html %}{% endif %}
 
       {% include post_pagination.html %}
