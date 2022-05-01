@@ -284,6 +284,7 @@ defaults:
       path: ""
     values:
       author_profile: true
+      studying: true
       sidebar:
         nav: "main"
   
@@ -297,8 +298,10 @@ defaults:
       read_time: true
       comments: # true
       share: true
+      studying: true
       related: true
       category: null
+      
 
   # _pages
   - scope:
