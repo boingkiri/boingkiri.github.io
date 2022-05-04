@@ -19,7 +19,7 @@ c++
     'using' keyword
     'auto' keyword
     'make_unique'
-    static cast
+    static_cast
 
 JUCE
     ProcessContextReplacing
