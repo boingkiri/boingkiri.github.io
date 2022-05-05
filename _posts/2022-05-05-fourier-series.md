@@ -83,3 +83,8 @@ $$
 $$
 
 가 되는 것이다.
+
+----
+참고문헌
+
+[SuperMemi's Study : 푸리에 급수](https://supermemi.tistory.com/95?category=837542)
