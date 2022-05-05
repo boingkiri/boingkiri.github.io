@@ -25,12 +25,12 @@ use_math: true
 
 ## 모든 주기함수는 각기 다른 주파수를 가진 정현파 함수의 합이다.
 
-* $w = \cfrac{2 \pi}{T}$ 로 가정한다면 (w: 주기함수의 주파수)
-    * $ e^{j \frac{2 \pi n}{T} t} = e^{jnwt}$
-    * $e^{jnwt} = cos(nwt) + jsin(nwt)$ -> 오일러법칙
+* $w = \cfrac{2 \pi}{T} $ 로 가정한다면 (w: 주기함수의 주파수)
+    * $ e^{j \frac{2 \pi n}{T} t} = e^{jnwt} $
+    * $e^{jnwt} = cos(nwt) + jsin(nwt) $ -> 오일러법칙
 
 * 이를 위의 (1)의 식에 대입을 한다면
-    * $ f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t} $  = $ \sum_{n=-\infty}^{\infty} C_n (cos(nwt) + jsin(nwt)) $
+    * $ f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t} = \sum_{n=-\infty}^{\infty} C_n (cos(nwt) + jsin(nwt)) $
 
 * 위 특징을 통해 적절한 정현파의 조합으로 모든 주기함수를 표현할 수 있다!
 
@@ -49,7 +49,8 @@ $$
     * 푸리에 급수의 양 변에 켤레복소수를 곱해준다. ($e^{-j \frac{2 \pi q}{T} t}$)
 
     $$ 
-    e^{-j \frac{2 \pi q}{T} t} f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t} * e^{-j \frac{2 \pi q}{T} t} $$
+    e^{-j \frac{2 \pi q}{T} t} f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t} * e^{-j \frac{2 \pi q}{T} t} 
+    $$
 
     * 이후, f(t)의 시간주기인 [0, T]로 적분해준다.
 
@@ -92,6 +93,7 @@ $$
 가 되는 것이다.
 
 ----
+
 참고문헌
 
 [SuperMemi's Study : 푸리에 급수](https://supermemi.tistory.com/95?category=837542)
