@@ -5,6 +5,7 @@ category:
 tags:
     - "Math"
 toc: true
+use_math: true
 ---
 # 서론
 본격적으로 신호처리를 공부하기 전에 짚고 넘어가야하는 수학 개념을 짚고 넘어가야 할 것 같아서 몇 가지를 정리하고자 한다.
@@ -15,8 +16,8 @@ toc: true
     * *적절한 계수*를 가지고, *적절한 주기*를 가진 정현파의 조합으로 모든 주기함수를 근사할 수 있다는 아이디어를 생각한 것이다.
 
 * 수식
-    * $ f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t}$ ....(1)
-    * $ C_n = \cfrac{1}{T} \int_0^T f(t) e^{j \frac{2 \pi n}{T} t} dt$
+    * $ f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t} $ ....(1)
+    * $ C_n = \cfrac{1}{T} \int_0^T f(t) e^{j \frac{2 \pi n}{T} t} dt $
     * for n = ..., -2, -1, 0, 1, 2, ...
 
 * 복잡한 수식이 소개가 되었지만, 이는 아래와 같은 의미를 가지고 있다.
@@ -28,7 +29,7 @@ toc: true
     * $e^{jnwt} = cos(nwt) + jsin(nwt)$ -> 오일러법칙
 
 * 이를 위의 (1)의 식에 대입을 한다면
-    * $ f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t}$  = $ \sum_{n=-\infty}^{\infty} C_n (cos(nwt) + jsin(nwt)) $
+    * $ f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t} $  = $ \sum_{n=-\infty}^{\infty} C_n (cos(nwt) + jsin(nwt)) $
 
 * 위 특징을 통해 적절한 정현파의 조합으로 모든 주기함수를 표현할 수 있다!
 
