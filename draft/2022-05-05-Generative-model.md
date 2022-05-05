@@ -1,5 +1,5 @@
 ---
-title: "[Deep Learning] GAN"
+title: "[Deep Learning] 생성 모델이란?"
 category:
     - "Deep Learning"
 tags:
@@ -13,4 +13,11 @@ use_math: true
 
 <br>
 
-# 
+생성모델에는 여러 가지 방식들이 있다. 
+
+# Generative model
+앞서 설명하였듯, 생성 모델은 
+---
+
+참고문헌
+https://minsuksung-ai.tistory.com/12
