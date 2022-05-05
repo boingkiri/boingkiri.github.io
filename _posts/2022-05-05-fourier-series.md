@@ -17,7 +17,7 @@ use_math: true
     * *적절한 계수*를 가지고, *적절한 주기*를 가진 정현파의 조합으로 모든 주기함수를 근사할 수 있다는 아이디어를 생각한 것이다.
 
 * 수식
-    * $ f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t} $ ....(1)
+    * $ f(t) = \sum_{n=-\infty}^{\infty} C_n e^{j \frac{2 \pi n}{T} t} $ ... (1)
     * $ C_n = \cfrac{1}{T} \int_0^T f(t) e^{j \frac{2 \pi n}{T} t} dt $
     * for n = ..., -2, -1, 0, 1, 2, ...
 
