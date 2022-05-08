@@ -14,7 +14,7 @@ use_math: true
 
 다음 포스트를 보고 온다면 이해에 도움이 될 것이다.
 
-[푸리에 급수]({{ site.baseurl }}{% link _posts/2022-05-05-fourier-series.md %})
+[푸리에 급수]({{ site.baseurl }}{% link _posts/Signal-Processing/2022-05-05-fourier-series.md %})
 
 # 푸리에 급수의 확장
 
