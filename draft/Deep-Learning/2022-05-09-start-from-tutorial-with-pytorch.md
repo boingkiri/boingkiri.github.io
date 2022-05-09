@@ -1,9 +1,9 @@
 ---
-title: "[Deep Learning] GAN"
+title: "[Deep Learning] 나만의 Simple SVS 만들어보기"
 category:
     - "Deep Learning"
 tags:
-    - "Generative Model"
+    - "Pytorch", "SVS"
 toc: true
 use_math: true
 ---
