@@ -22,7 +22,7 @@ use_math: true
 
 
 # Generative model
-생성모델은 비지도학습의 일종으로써, 입력 데이터 값의 regularity와 패턴을 학습하여 원본 데이터로부터 얻을 수 있을 데이터를 생성하는 것을 목표로 하는 모델을 일컫는다. 레이블이 따로 없어도 학습을 할 수 있다는 점에서 비지도 학습으로 분류되고, 학습하는 과정에서 입력 데이터에 숨겨져 있는 패턴을 학습을 하며 합성 과정에서 이를 모방하게 된다. 특히 생성모델은 입력 데이터의 분포를 학습하는데 주력하게 된다. 학습된 데이터의 분포를 통해 입력 데이터와 유사한 새로운 데이터를 출력하기 때문이다. 즉, 앞으로 소개할 다양한 생성 모델의 궁극적 목표는 **학습데이터의 분포와 차이가 적은 sampling 분포를 학습하는 것**이 된다. (여기서 sampling이란, 모델이 학습한 확률밀도함수를 통해 )
+생성모델은 비지도학습의 일종으로써, 입력 데이터 값의 regularity와 패턴을 학습하여 원본 데이터로부터 얻을 수 있을 데이터를 생성하는 것을 목표로 하는 모델을 일컫는다. 레이블이 따로 없어도 학습을 할 수 있다는 점에서 비지도 학습으로 분류되고, 학습하는 과정에서 입력 데이터에 숨겨져 있는 패턴을 학습을 하며 합성 과정에서 이를 모방하게 된다. 특히 생성모델은 입력 데이터의 분포를 학습하는데 주력하게 된다. 학습된 데이터의 분포를 통해 입력 데이터와 유사한 새로운 데이터를 출력하기 때문이다. 즉, 앞으로 소개할 다양한 생성 모델의 궁극적 목표는 **학습데이터의 분포와 차이가 적은 sampling 분포를 학습하는 것**이 된다. (여기서 sampling이란, 모델이 학습한 확률분포를 통해 데이터를 생성하는 것을 의미한다.)
 
 
 
@@ -31,9 +31,39 @@ use_math: true
   * 학습데이터의 분포를 안다고 가정하고 이를 기반으로 학습하는 방식 : Explicit density
   * 학습 데이터의 분포를 모른 상태에서 학습하는 방식: Implicit density
 
-  
+|![](https://miro.medium.com/max/958/1*otb47mG5KQWNh91prmyxzg.png)|
+|:---:|
+|Taxonomy of Generative Models (from Ian Goodfellow’s NIPS tutorial, 2016)|
 
----
+각각의 방법에 대한 장점 및 단점을 정리해보겠다.
+
+## Tractable density
+학습 데이터의 분포를 직접적으로 구하는 방법이다. 
+### Fully Visible Belief Networks
+확률분포를 구하기 위해 연쇄기법(Chain rule)을 사용하는 방식이다. 
+
+![](https://miro.medium.com/max/1024/1*EEOWOQSAOams58A4gMfjkQ.png)
+
+위 수식에서 좌변은 데이터 x에 대한 likelihood를 뜻하게 되고, 우변의 $p(x_i|x_1, x_2, ... , x_{i-1})$은 모든 이전 픽셀이 주어졌을 때, i번째의 픽셀이 가지는 값의 확률에 해당한다.(추가 공부 요망)
+
+이 분류에 해당하는 가장 유명한 모델은 PixelCNN, PixelRNN이 있다.
+
+FVBN의 가장 큰 문제는 병렬연산을 사용할 수 없는 구조이기 때문에 데이터를 생성하는 속도가 매우 느리다는 것이다.  
+
+### Models based on change of variables (Non-linear ICA)
+가우시안과 같은 간단한 확률분포로부터 non-linear function을 통해 다른 공간 분포로 변환하는 방식이다. 
+
+이 방식의 문제점은 
+
+## Apprixomate density
+학습 데이터의 분포를 추정하는 방법이다.
+
+### 
+## Implicit density
+### GAN
+
+---------
 
 참고문헌
 https://minsuksung-ai.tistory.com/12
+https://towardsdatascience.com/generative-adversarial-networks-history-and-overview-7effbb713545
