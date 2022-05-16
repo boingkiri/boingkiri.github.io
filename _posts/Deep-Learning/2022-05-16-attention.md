@@ -60,6 +60,7 @@ attention의 아이디어는 (각 시점마다 생성되는 decoder의 hidden st
 attention의 작동 기작을 이미지로 표현하자면 위와 같이 나타나게 된다. 위 상황은 encoder에 입력으로 [I, am, a, student]를 차례로 입력하였으며, 이 정보를 바탕으로 decoder가 차례로 단어들을 예측하고 있는 상황이다. 
 
 #### attention score
+
 |![](https://wikidocs.net/images/page/22893/dotproductattention2_final.PNG)|
 |:---:|
 |https://wikidocs.net/22893|
@@ -73,6 +74,7 @@ $$
 위 그림에서 attention score는 각 encoder의 hidden state마다 하나의 scalar값으로 나타나지게 된다.
 
 #### attention distribution
+
 |![](https://wikidocs.net/images/page/22893/dotproductattention3_final.PNG)|
 |:---:|
 |https://wikidocs.net/22893|
@@ -81,6 +83,7 @@ $$
 
 
 #### attention value
+
 |![](https://wikidocs.net/images/page/22893/dotproductattention4_final.PNG)|
 |:---:|
 |https://wikidocs.net/22893|
