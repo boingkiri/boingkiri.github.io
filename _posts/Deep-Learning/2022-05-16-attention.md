@@ -3,10 +3,12 @@ title: "[Deep Learning] 어텐션"
 category:
     - "Deep Learning"
 tags:
-    - "NLP", "seq2seq"
+    - "NLP"
+    - "seq2seq"
 toc: true
 use_math: true
 ---
+
 # 서론
 트렌스포머에 대해 정리를 해보아야 할 것 같아서 트렌스포머의 기반 기술이 되는 attention의 기초를 단단히 하고 가고 싶어서 블로그 글을 작성하게 되었다.
 
