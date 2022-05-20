@@ -1,0 +1,1 @@
+https://dbstndi6316.tistory.com/297#:~:text=Adam%20(Adaptive%20Moment%20Estimation)&text=%ED%98%84%EC%9E%AC%20%EA%B0%80%EC%9E%A5%20%EB%A7%8E%EC%9D%B4%20%EC%82%AC%EC%9A%A9%EB%90%98%EB%8A%94,%ED%95%98%EB%8B%A4%EA%B3%A0%EB%8F%84%20%ED%95%A0%20%EC%88%98%20%EC%9E%88%EB%8B%A4.
