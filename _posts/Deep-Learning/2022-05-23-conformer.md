@@ -115,5 +115,3 @@ self attention에서 각 attention head가 input의 다른 부분들을 학습�
 
 ![Test!]({{ page.figure | append: "/aa.png"}})
 
-![Test!]({{ site.url | append: "/you_are_here_mars.jpg"}})
-
