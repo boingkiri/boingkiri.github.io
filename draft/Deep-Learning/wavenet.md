@@ -1,4 +1,11 @@
 
+# WaveNet
+기본적으로 waveform x = {x_1, ..., x_T}의 joint probability를 구하기 위해 조건부확률의 곱을 사용하게 된다. 즉,
+
+$$
+p(x) = \Pi^T_{t=1}p(x_t | x_1, ..., x_{t-1})
+$$
+
 ## Causal Convolution
 
 기본적으로 causal convolution에서 왔다.
@@ -48,3 +55,34 @@ $$
 
 (Conditinal wavenet 그림)
 
+추가적인 조건으로서 주어지는 input h가 있을 때, conditonal distribution은 p(x | h)를 모델링 하기 위해선 식이 약간 바뀐다.
+
+$$
+p(x | h) = \Pi^T_{t=1}p(x_t | x_1, ..., x_{t-1}, h)
+$$
+
+조건을 줌으로써 WaveNet이 원하는 특성을 가지는 audio를 학습할 수 있게 한다. 예를들어, 다화자 setting에서는 h값에 speaker identity를 추가적인 input으로 줌으로써 합성하고자 하는 speaker를 설정해줄 수 있다.
+
+조건을 주는 방식을 두가지로 분류할 수 있다. 1) global conditioning, 2) local conditioning
+
+### global conditioning
+
+global conditioning은 하나의 잠재표현인 h만으로 모든 timestep의 output distribution에 영향을 주는 형태의 조건을 말한다. TTS를 합성할 때의 speaker embedding과 같은 값이 여기에 해당할 것이다.
+
+그렇게 된다면 앞서 소개했던 activation function의 수식이 살짝 변형되게 된다.
+
+$$
+z = tanh(W_{f, k} * x + V^T_{f, k} h) \cdot \sigma (W_{g, k} * x + V^T_{g, k} h)
+$$
+
+여기서 $V_{*, k}$ 는 학습가능한 linear projection이고, $V^T_{*, k} h$ 는 시간축에 대해 적용이 되게 된다.
+
+### local conditioning
+
+local conditioning은 audio signal보다 더 작은 sampling frequency로서 만들어지게된 시계열이 $h_t$로서 주어지게 된다. 그 후 시계열 data를 upsampling하여 새로운 시계열인 y=f(h)로서 만들어 audio signal과 같은 resolution을 가지게 맞춘 후, activation unit을 다음과 같이 적용한다.
+
+$$
+z = tanh(W_{f, k} * x + V_{f, k} y) \cdot \sigma (W_{g, k} * x + V_{g, k} y)
+$$
+
+여기서 $V_{f, k} * y$ 는
