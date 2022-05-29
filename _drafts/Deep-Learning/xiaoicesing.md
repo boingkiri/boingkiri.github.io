@@ -7,6 +7,7 @@ tags:
     - "SVS"
 toc: true
 use_math: true
+figure: "/figs/Deep_Learning/xiaoicesing"
 ---
 
 # 서론
@@ -39,7 +40,11 @@ duration model에선 musical note의 길이와 predicted duration의 길이를 �
 Decoder와 duration predictor가 같은 encoder를 공유하는 Fastspeech의 구조를 이용해서 spectrum과 F0, duration model이 같이 학습되게 된다.
 
 # Architecture
-
+![]({{page.figure | append: "/XiaoiceSing.PNG"}})
 
 
 ---------
+
+참고문헌
+
+https://arxiv.org/abs/2006.06261
