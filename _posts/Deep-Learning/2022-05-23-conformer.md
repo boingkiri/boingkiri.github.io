@@ -113,5 +113,7 @@ self attention에서 각 attention head가 input의 다른 부분들을 학습�
 
 (표 삽입)
 
-![Test!]({{ page.figure | append: "/aa.png"}})
+<img src="{{ page.figure | append: '/aa.png'}}">
+
+<!-- ![Test!]({{ page.figure | append: "/aa.png"}}) -->
 
