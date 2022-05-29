@@ -6,7 +6,8 @@ tags:
     - "Generative Model"
 toc: true
 use_math: true
-figure: "/_figs/Deep_Learning/conformer"
+figure: "/figs/Deep_Learning/conformer"
+# figure: "/figs/"
 ---
 
 # 서론
@@ -113,7 +114,5 @@ self attention에서 각 attention head가 input의 다른 부분들을 학습�
 
 (표 삽입)
 
-<img src="{{ page.figure | append: '/aa.png'}}">
-
-<!-- ![Test!]({{ page.figure | append: "/aa.png"}}) -->
+![Test!]({{ page.figure | append: "/aa.png"}})
 
