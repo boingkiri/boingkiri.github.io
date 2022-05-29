@@ -7,7 +7,6 @@ tags:
 toc: true
 use_math: true
 figure: "/figs/Deep_Learning/conformer"
-# figure: "/figs/"
 ---
 
 # 서론
@@ -38,9 +37,11 @@ input에 convolution을 적용하여 subsampling한 다음, comformer block들�
 
 Transformer-XL 로부터 relative sinusoidal positional encoding을 가져왔다고 한다. 이 positional encoding 방식이 self-attention module을 다양한 길이의 input을 잘 일반화하고 다양한 길이의 utterance에 대응을 더 잘 한다고 한다.
 
-(대충 여기에 multli-head self attention module 그림)
+|![Test!]({{ page.figure | append: "/MHSA.png"}})|
+|:---:|
+|(Conformer 논문)|
 
-* relative sinusoidal positional encoding: 설명 필요
+* relative sinusoidal positional encoding: 추후 설명 
 
 ## Convolution module
 
@@ -114,5 +115,8 @@ self attention에서 각 attention head가 input의 다른 부분들을 학습�
 
 (표 삽입)
 
-![Test!]({{ page.figure | append: "/aa.png"}})
+-----
 
+참고문헌
+
+https://arxiv.org/abs/2005.08100
