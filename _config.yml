@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en-US"
 title                    : "Boingkiri, do something!"
 title_separator          : "-"
 subtitle                 : "...in ML, Speech, Signal Processing." # site tagline that appears below site title in masthead
